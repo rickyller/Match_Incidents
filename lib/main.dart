@@ -4,8 +4,14 @@ import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:uuid/uuid.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(MyApp());
 }
 
@@ -76,7 +82,7 @@ class _ChatPageState extends State<ChatPage> {
   }
 
   Future<String?> _sendMessageToServer(String message) async {
-    final url = 'http://127.0.0.1:5000/generate';
+    final url = 'https://match-incidents-gmpuppbwwq-uc.a.run.app/generate'; // Actualiza esta URL con la URL de tu servicio en Cloud Run
     final headers = {'Content-Type': 'application/json'};
     final body = json.encode({'input': message});
 

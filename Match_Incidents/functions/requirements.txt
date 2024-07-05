@@ -1,0 +1,5 @@
+Flask==2.0.2
+Flask-Cors==3.0.10
+google-generativeai
+gunicorn==20.1.0
+Werkzeug==2.0.3  # Fijar la versión de Werkzeug

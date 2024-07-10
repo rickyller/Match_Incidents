@@ -34,7 +34,7 @@ class _ChatPageState extends State<ChatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter Chat'),
+        title: const Text('Incidents TDP Chat'),
       ),
       body: Chat(
         messages: _messages,

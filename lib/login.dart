@@ -2,8 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
-import 'package:google_sign_in_web/google_sign_in_web.dart';
-import 'chat_page.dart'; // Asegúrate de importar tu ChatPage
+import 'chat_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});

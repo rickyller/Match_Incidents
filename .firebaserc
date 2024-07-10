@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "match-incidents-9e268"
-  }
+    "default": "match-incidents-9e268",
+    "match-incidents": "match-incidents-9e268"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }

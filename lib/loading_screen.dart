@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'chat_page.dart'; // Asegúrate de importar tu ChatPage
-import 'login.dart';
 import 'login.dart'; // Asegúrate de importar tu LoginPage
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class LoadingScreen extends StatefulWidget {
   const LoadingScreen({Key? key}) : super(key: key);
@@ -53,13 +53,37 @@ class _LoadingScreenState extends State<LoadingScreen> with SingleTickerProvider
     return Scaffold(
       backgroundColor: Colors.black,
       body: Center(
-        child: FadeTransition(
-          opacity: _animation,
-          child: Image.asset(
-            'assets/logo.png', // Asegúrate de colocar la imagen en la carpeta correcta y actualizar la ruta
-            width: 500, // Ajusta el tamaño según sea necesario
-            height: 500,
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            FadeTransition(
+              opacity: _animation,
+              child: Image.asset(
+                'assets/logo.png', // Asegúrate de colocar la imagen en la carpeta correcta y actualizar la ruta
+                width: 500, // Ajusta el tamaño según sea necesario
+                height: 500,
+              ),
+            ),
+            const SizedBox(height: 20),
+            AnimatedTextKit(
+              animatedTexts: [
+                TypewriterAnimatedText(
+                  'Incidents TDP Chat by Ricardo Murillo',
+                  textStyle: const TextStyle(
+                    fontFamily: 'Orbitron',
+                    fontSize: 18.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  speed: const Duration(milliseconds: 50),
+                ),
+              ],
+              totalRepeatCount: 1,
+              pause: const Duration(milliseconds: 500),
+              displayFullTextOnTap: true,
+              stopPauseOnTap: true,
+            ),
+          ],
         ),
       ),
     );

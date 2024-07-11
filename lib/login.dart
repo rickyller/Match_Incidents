@@ -58,6 +58,12 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Image.asset(
+              'assets/logo.png', // Asegúrate de colocar la imagen en la carpeta correcta y actualizar la ruta
+              width: 200, // Ajusta el tamaño según sea necesario
+              height: 200,
+            ),
+            const SizedBox(height: 20),
             GoogleSignInButton(
               clientId: '789241953207-52qt27bonm31kjsi0rdb0e50bfk1b3ch.apps.googleusercontent.com',
               onSignIn: _handleSignIn,

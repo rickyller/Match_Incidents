@@ -176,4 +176,3 @@ if __name__ == '__main__':
 #Para actualizar el script, ejecuta el siguiente comando en la terminal: 
 # gcloud builds submit --tag gcr.io/match-incidents-9e268/match-incidents
 # gcloud run deploy match-incidents --image gcr.io/match-incidents-9e268/match-incidents --platform managed --region us-central1 --allow-unauthenticated
-

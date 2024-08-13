@@ -24,13 +24,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         brightness: Brightness.light,
+        iconTheme: IconThemeData(color: Colors.blue), // Agrega esto
       ),
       darkTheme: ThemeData(
         primarySwatch: Colors.blue,
         brightness: Brightness.dark,
+        iconTheme: IconThemeData(color: Colors.white), // Agrega esto para modo oscuro
       ),
-      themeMode: ThemeMode.system, // Usa el modo del sistema (oscuro/claro)
+      themeMode: ThemeMode.light,
       home: const LoadingScreen(),
     );
   }
 }
+
